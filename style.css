@@ -1,0 +1,21 @@
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.personnage-mere {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+.personnage-mere img {
+    width: 250px;
+    height: auto;
+    display: block;
+     mask-image: radial-gradient(
+        ellipse,
+        black 45%,
+        transparent 75%)
+}
