@@ -1,0 +1,17 @@
+# Midnight Underground
+
+Midnight Underground est un jeu narratif interactif réalisé en HTML, CSS et JavaScript.  
+Le joueur incarne un jeune de 18 ans qui hérite de la Chevelle SS 1970 de son père.  
+Pour aider sa mère, il doit choisir entre chercher un travail légal ou participer à des courses de rue.  
+Chaque décision dirige le joueur vers une nouvelle scène et influence la suite de l’histoire.
+
+
+
+La voie légale permet de travailler comme éboueur, mais peut mener à une situation financière difficile.  
+La voie illégale propose une course automobile avec plusieurs décisions importantes à prendre. 
+
+
+Selon ses choix, le joueur peut gagner la course, casser le moteur de la voiture ou perdre le jeu.  
+Les différentes scènes sont reliées entre elles grâce aux liens présents dans les pages HTML.  
+J’ai utilisé l’intelligence artificielle pour générer les images et m’aider à améliorer l’apparence du CSS.  
+Cela m’a permis de me concentrer pleinement sur la création du HTML, du JavaScript et du fonctionnement du jeu.
