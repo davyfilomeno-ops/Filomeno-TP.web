@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    background-color: #11131a;
+    color: #f5f2e8;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.bandeau-chapitre4 {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.conclusion {
+    box-sizing: border-box;
+    min-height: 270px;
+    padding: 48px 0 56px;
+    text-align: center;
+}
+
+.conclusion h1 {
+    margin: 0 24px 24px;
+    color: #ffb347;
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 700;
+    line-height: 1.1;
+    text-transform: uppercase;
+}
+
+.message-accessible {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+.bandeau-defilant {
+    overflow: hidden;
+    padding: 18px 0;
+    border-top: 1px solid rgb(255 179 71 / 45%);
+    border-bottom: 1px solid rgb(255 179 71 / 45%);
+    background: #20232d;
+}
+
+.bandeau-defilant-contenu {
+    display: flex;
+    width: max-content;
+    animation: defilement 24s linear infinite;
+}
+
+.bandeau-defilant-contenu span {
+    flex: none;
+    padding-right: 48px;
+    color: #f5f2e8;
+    font-size: clamp(1.25rem, 3vw, 2rem);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+@keyframes defilement {
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+.choix-reponses {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: min(280px, 100%);
+    margin: 24px auto 0;
+}
+
+.bulle-reponse {
+    display: block;
+    padding: 14px 18px;
+    border: 1px solid #555;
+    border-radius: 10px;
+    background-color: #252a35;
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.bulle-reponse:hover {
+    transform: scale(1.03);
+    border-color: #ff6600;
+    background-color: #ff6600;
+}
+
+@media (max-width: 700px) {
+    .conclusion {
+        padding: 36px 0 48px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .bandeau-defilant {
+        overflow: visible;
+    }
+
+    .bandeau-defilant-contenu {
+        width: auto;
+        justify-content: center;
+        animation: none;
+    }
+
+    .bandeau-defilant-contenu span + span {
+        display: none;
+    }
+
+    .bandeau-defilant-contenu span {
+        padding: 0 16px;
+        white-space: normal;
+    }
+}

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap');
+
 
 img {
     display: block;
@@ -18,4 +20,19 @@ img {
         ellipse,
         black 45%,
         transparent 75%)
+}
+
+.texte-intro {
+    position: fixed;
+    bottom: 80px;
+    left: 250px;
+
+    color: black;
+    font-size: 15px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 700;
+
+    max-width: 600px;
+    line-height: 1;
+    white-space: pre-wrap;
 }

@@ -1,0 +1,54 @@
+.personnage-principal {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+}
+
+.personnage-principal img {
+    width: 300px;
+    height: auto;
+    display: block;
+    mask-image: radial-gradient(
+        ellipse,
+        black 45%,
+        transparent 75%
+    );
+}
+.choix-reponses {
+    position: fixed;
+    right: 320px;
+    bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 240px;
+}
+
+.bulle-reponse {
+    background-color: #252a35;
+    color: white;
+    padding: 9px 12px;
+    border: 1px solid #555;
+    border-radius: 10px;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.bulle-reponse:hover {
+    background-color: #ff6600;
+    border-color: #ff6600;
+    transform: scale(1.03);
+}
+
+@media (max-width: 1429px) {
+    .choix-reponses {
+        top: 20px;
+        right: 20px;
+        bottom: auto;
+        width: min(240px, calc(100vw - 40px));
+    }
+}

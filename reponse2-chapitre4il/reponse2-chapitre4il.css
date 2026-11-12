@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    background-color: #11131a;
+    color: #f5f2e8;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.bandeau-cassemoteur {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.zone-dialogue {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    align-items: start;
+    gap: 24px;
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 65vh;
+    padding: 32px 24px;
+}
+
+.bulle-dialogue {
+    position: relative;
+    box-sizing: border-box;
+    width: fit-content;
+    max-width: 100%;
+    padding: 16px 20px;
+    border: 3px solid #252a35;
+    border-radius: 24px;
+    background-color: #f5f2e8;
+}
+
+.bulle-dialogue p {
+    margin: 0;
+    color: #252a35;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.bulle-dialogue-milieu {
+    margin-left: auto;
+}
+
+.bulle-dialogue-gauche {
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.bulle-dialogue-gauche.visible {
+    visibility: visible;
+    opacity: 1;
+}
+
+.bulle-dialogue::before,
+.bulle-dialogue::after {
+    position: absolute;
+    top: -27px;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    content: "";
+}
+
+.bulle-dialogue::before {
+    border-width: 0 19px 25px;
+    border-color: transparent transparent #252a35;
+}
+
+.bulle-dialogue::after {
+    top: -20px;
+    border-width: 0 16px 21px;
+    border-color: transparent transparent #f5f2e8;
+}
+
+.bulle-dialogue-milieu::before {
+    left: calc(95% - 19px);
+}
+
+.bulle-dialogue-milieu::after {
+    left: calc(95% - 16px);
+}
+
+.bulle-dialogue-droite::before {
+    left: calc(55% - 19px);
+}
+
+.bulle-dialogue-droite::after {
+    left: calc(55% - 16px);
+}
+
+@media (max-width: 700px) {
+    .zone-dialogue {
+        grid-template-columns: 1fr;
+    }
+
+    .bulle-dialogue-milieu {
+        margin-left: 0;
+    }
+
+    .bulle-dialogue-milieu::before {
+        left: calc(60% - 19px);
+    }
+
+    .bulle-dialogue-milieu::after {
+        left: calc(60% - 16px);
+    }
+
+    .bulle-dialogue-droite::before {
+        left: calc(82% - 19px);
+    }
+
+    .bulle-dialogue-droite::after {
+        left: calc(82% - 16px);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .bulle-dialogue-gauche {
+        transition: none;
+    }
+}

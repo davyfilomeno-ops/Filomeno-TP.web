@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap');
+
+body {
+    margin: 0;
+    background-color: #11131a;
+    color: #f5f2e8;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+.bandeau-rasso {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.bulle-dialogue-badboy {
+    position: relative;
+    box-sizing: border-box;
+    width: min(560px, calc(100% - 48px));
+    min-height: 130px;
+    margin: 0;
+    padding: 24px;
+    border: 3px solid #252a35;
+    border-radius: 24px;
+    background-color: #f5f2e8;
+}
+
+.texte-reponse2 {
+    margin: 0;
+    color: #252a35;
+    font-size: 19px;
+    font-weight: 600;
+    line-height: 1.35;
+}
+
+.bulle-dialogue-badboy::before,
+.bulle-dialogue-badboy::after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+}
+
+.bulle-dialogue-badboy::before {
+    top: -27px;
+    right: 24%;
+    border-width: 0 19px 25px;
+    border-color: transparent transparent #252a35;
+}
+
+.bulle-dialogue-badboy::after {
+    top: -20px;
+    right: calc(24% + 3px);
+    border-width: 0 16px 21px;
+    border-color: transparent transparent #f5f2e8;
+}
+
+.zone-dialogue {
+    display: grid;
+    grid-template-columns: minmax(0, 240px) minmax(0, 560px);
+    align-items: start;
+    justify-content: space-between;
+    gap: 32px;
+    width: min(1120px, calc(100% - 48px));
+    margin: 12px auto 0;
+}
+
+.choix-reponses {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+    margin: 0;
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+
+.choix-reponses.visible {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.bulle-reponse {
+    padding: 9px 12px;
+    border: 1px solid #555;
+    border-radius: 10px;
+    background-color: #252a35;
+    color: white;
+    font-family: 'Rajdhani', sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.bulle-reponse:hover {
+    transform: scale(1.03);
+    border-color: #ff6600;
+    background-color: #ff6600;
+}
+
+@media (max-width: 900px) {
+    .zone-dialogue {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        margin-top: 12px;
+    }
+
+    .bulle-dialogue-badboy {
+        min-height: 110px;
+    }
+}
